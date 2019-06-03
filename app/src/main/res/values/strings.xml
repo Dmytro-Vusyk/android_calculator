@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">advenced_calculator</string>
+    <string name="multiplication_sign" translatable="false"> &#xD7; </string>
+    <string name="division_sign" translatable="false"> &#x00F7; </string>
+    <string name="plusminus_sign" translatable="false">&#177;</string>
+</resources>

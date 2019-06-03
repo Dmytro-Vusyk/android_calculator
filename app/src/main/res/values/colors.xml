@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#E5373F</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <!-- number button colors -->
+    <color name="number_button_background">#333333</color>
+    <color name="number_button_pressed_background">#525252</color>
+    <color name="number_button_text">#c4c4c4</color>
+
+    <!-- math button colors -->
+    <color name="math_button_background">#FF9800</color>
+    <color name="math_button_text">#FFFFFF</color>
+
+    <!-- action button colors -->
+    <color name="action_button_background">#979696</color>
+    <color name="action_button_pressed_background">#B4B4B4</color>
+    <color name="action_button_text">#000000</color>
+
+
+</resources>

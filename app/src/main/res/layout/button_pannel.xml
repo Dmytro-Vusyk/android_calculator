@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    android:columnCount="4"
+    android:rowCount="5">
+
+    <Button
+        android:id="@+id/button_clear"
+        style="@style/action_buttons"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:onClick="clearButtonIsClicked"
+        android:text="C" />
+
+    <Button
+        android:id="@+id/button_plusminus"
+        style="@style/action_buttons"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:onClick="actionButtonClicked"
+        android:text="@string/plusminus_sign" />
+
+    <Button
+        android:id="@+id/button_percent"
+        style="@style/action_buttons"
+        android:layout_row="0"
+        android:layout_column="2"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:onClick="actionButtonClicked"
+        android:text="%" />
+
+    <Button
+        android:id="@+id/button_divide"
+        style="@style/math_action_buttons"
+        android:layout_row="0"
+        android:layout_column="3"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:onClick="mathButtonClicked"
+        android:text="@string/division_sign" />
+
+    <Button
+        android:id="@+id/button_seven"
+        style="@style/number_buttons"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:onClick="numberButtonClicked"
+        android:text="7" />
+
+    <Button
+        android:id="@+id/button_eight"
+        style="@style/number_buttons"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:onClick="numberButtonClicked"
+        android:text="8" />
+
+    <Button
+        android:id="@+id/button_nine"
+        style="@style/number_buttons"
+        android:layout_row="1"
+        android:layout_column="2"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:onClick="numberButtonClicked"
+        android:text="9" />
+
+    <Button
+        android:id="@+id/button_multiply"
+        style="@style/math_action_buttons"
+        android:layout_row="1"
+        android:layout_column="3"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:onClick="mathButtonClicked"
+        android:text="@string/multiplication_sign" />
+
+    <Button
+        android:id="@+id/button_four"
+        style="@style/number_buttons"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:onClick="numberButtonClicked"
+        android:text="4" />
+
+    <Button
+        android:id="@+id/button_five"
+        style="@style/number_buttons"
+        android:layout_row="2"
+        android:layout_column="1"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:onClick="numberButtonClicked"
+        android:text="5" />
+
+    <Button
+        android:id="@+id/button_six"
+        style="@style/number_buttons"
+        android:layout_row="2"
+        android:layout_column="2"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:onClick="numberButtonClicked"
+        android:text="6" />
+
+    <Button
+        android:id="@+id/button_minus"
+        style="@style/math_action_buttons"
+        android:layout_row="2"
+        android:layout_column="3"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:onClick="mathButtonClicked"
+        android:text="-" />
+
+
+    <Button
+        android:id="@+id/button_one"
+        style="@style/number_buttons"
+        android:layout_row="3"
+        android:layout_column="0"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:onClick="numberButtonClicked"
+        android:text="1" />
+
+    <Button
+        android:id="@+id/button_two"
+        style="@style/number_buttons"
+        android:layout_row="3"
+        android:layout_column="1"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:onClick="numberButtonClicked"
+        android:text="2" />
+
+    <Button
+        android:id="@+id/button_three"
+        style="@style/number_buttons"
+        android:layout_row="3"
+        android:layout_column="2"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:onClick="numberButtonClicked"
+        android:text="3" />
+
+    <Button
+        android:id="@+id/button_plus"
+        style="@style/math_action_buttons"
+        android:layout_row="3"
+        android:layout_column="3"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:onClick="mathButtonClicked"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/button_zero"
+        style="@style/number_buttons"
+        android:layout_row="4"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:onClick="numberButtonClicked"
+        android:text="0" />
+
+    <Button
+        android:id="@+id/button_point"
+        style="@style/number_buttons"
+        android:layout_row="4"
+        android:layout_column="2"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:onClick="dotIsPressed"
+        android:text="." />
+
+    <Button
+        android:id="@+id/button_equality"
+        style="@style/math_action_buttons"
+        android:layout_row="4"
+        android:layout_column="3"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:onClick="equalityButtonClicked"
+        android:text="=" />
+
+
+</GridLayout>
