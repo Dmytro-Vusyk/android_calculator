@@ -25,7 +25,42 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         tvInputField = (TextView) findViewById(R.id.tv_input_field);
         tvResultField = (TextView) findViewById(R.id.tv_result_field);
+        operationSign = getLastCustomNonConfigurationInstance();
+    }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("resultField", tvResultField.getText().toString());
+        outState.putString("inputField", tvInputField.getText().toString());
+        outState.putDouble("firstOperand", firstOperand);
+        outState.putDouble("secondOperand", secondOperand);
+        outState.putBoolean("mathButtonIsPressed", mathButtonIsPressed);
+        outState.putInt("mathButtonId", mathButtonId);
+        outState.putString("currentInput", currentInput.toString());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        tvResultField.setText(savedInstanceState.getString("resultField"));
+        tvInputField.setText(savedInstanceState.getString("inputField"));
+        firstOperand = savedInstanceState.getDouble("firstOperand");
+        secondOperand = savedInstanceState.getDouble("secondOperand");
+        mathButtonIsPressed = savedInstanceState.getBoolean("mathButtonIsPressed");
+        savedInstanceState.getInt("mathButtonId");
+        savedInstanceState.getString("currentInput");
+
+    }
+
+    @Override
+    public OperationSigns onRetainCustomNonConfigurationInstance() {
+        return operationSign;
+    }
+
+    @Override
+    public OperationSigns getLastCustomNonConfigurationInstance() {
+        return operationSign;
     }
 
     public void numberButtonClicked(View view) {
@@ -108,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
     public void equalityButtonClicked(View view) {
         if (mathButtonIsPressed) unpressMathButton();
 
-        if (currentInput.length() == 0|| operationSign == null) return;
+        if (currentInput.length() == 0 || operationSign == null) return;
         secondOperand = Double.parseDouble(currentInput.toString());
 
         double result;
@@ -143,12 +178,12 @@ public class MainActivity extends AppCompatActivity {
 
         switch (actionButtonId) {
             case R.id.button_percent:
-                if (currentInput.length()== 0) return;
+                if (currentInput.length() == 0) return;
                 double a = Double.parseDouble(currentInput.toString()) / 100;
                 showInput(a);
                 break;
             case R.id.button_plusminus:
-                if (currentInput.length()== 0) return;
+                if (currentInput.length() == 0) return;
                 double b = -Double.parseDouble(currentInput.toString());
                 showInput(b);
                 break;
@@ -156,13 +191,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void clearButtonIsClicked(View view){
+    public void clearButtonIsClicked(View view) {
         if (mathButtonIsPressed) unpressMathButton();
 
         int buttonId = view.getId();
 
-        if (buttonId == R.id.button_clear){
-            if (currentInput.length() == 0){
+        if (buttonId == R.id.button_clear) {
+            if (currentInput.length() == 0) {
                 currentInput.setLength(0);
                 firstOperand = 0;
                 secondOperand = 0;
@@ -170,7 +205,7 @@ public class MainActivity extends AppCompatActivity {
                 tvInputField.setText("");
                 operationSign = null;
             } else {
-                currentInput.deleteCharAt(currentInput.length()-1);
+                currentInput.deleteCharAt(currentInput.length() - 1);
                 tvInputField.setText(currentInput);
             }
         }
@@ -218,7 +253,7 @@ public class MainActivity extends AppCompatActivity {
         tvInputField.setText("");
     }
 
-    private void showInput(double result){
+    private void showInput(double result) {
         currentInput.setLength(0);
         currentInput.append(result);
         tvInputField.setText(currentInput.toString());
