@@ -31,5 +31,4 @@ output.json
 #NDK
 obj/
 .externalNativeBuild
-Начиная с Android Studio 2.2 и до 3.0, новые проекты создаются с помощью этого файла gitignore:
 
